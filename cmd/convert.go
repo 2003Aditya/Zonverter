@@ -1,20 +1,17 @@
 package cmd
 
 import (
-	"fmt"
-
-	"github.com/spf13/cobra"
+    "fmt"
+    "github.com/spf13/cobra"
 )
 
-var hellocmd = &cobra.Command{
-    Use:  "hello",
-    Short: "A brief description of your command",
-    Long: `A description... `,
-    Run: func(cmd *cobra.Command, args []string) {
-        fmt.Println("first command")
-    },
-}
 
-func init() {
-    rootCmd.AddCommand(hellocmd)
+var convert = &cobra.Command {
+    Use : "convert",
+    Short : "converter for the file",
+    Long : `A long description`,
+
+    Run: func(cmd *cobra.Command, args []string) {
+        fmt.Println("converter")
+    },
 }
