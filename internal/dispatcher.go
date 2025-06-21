@@ -11,6 +11,8 @@ func Dispatcher(inputExt, outputExt, inputPath, outputPath string) error {
     fmt.Println("initialized dispatcher")
     for _, converter := range converters.GetConverters() {
         if converter.CanConvert(inputExt, outputExt) {
+            fmt.Println("CanConvert logged from dispatcher")
+
             return converter.Convert(inputPath, outputPath)
         }
     }
